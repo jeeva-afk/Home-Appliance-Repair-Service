@@ -1,0 +1,55 @@
+.read-more-container {
+    max-width: 800px; /* Set a max-width for the content */
+    margin: 50px auto; /* Center the content with margin */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Verdana', sans-serif; /* Font style */
+  }
+  
+  .post-title {
+    font-size: 2.5em; /* Header font size */
+    color: #2e3b4e; /* Darker color for the title */
+    text-align: center; /* Center the header */
+    margin-bottom: 15px; /* Space below the header */
+    border-bottom: 2px solid #2e3b4e; /* Bottom border */
+    padding-bottom: 10px; /* Space between text and border */
+  }
+  
+  .post-image {
+    width: 100%; /* Full width for responsive images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for images */
+    margin-bottom: 20px; /* Space below the image */
+    transition: transform 0.3s; /* Smooth hover effect */
+  }
+  
+  .post-image:hover {
+    transform: scale(1.03); /* Zoom effect on hover */
+  }
+  
+  .post-content {
+    font-size: 18px; /* Font size for the content */
+    line-height: 1.6; /* Line height for readability */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below paragraphs */
+  }
+  
+  .back-button {
+    display: inline-block; /* Make it block for padding */
+    margin-top: 20px; /* Space above button */
+    padding: 12px 25px; /* Button padding */
+    color: #fff; /* Button text color */
+    background-color: #007bff; /* Button background color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight grow effect on hover */
+  }
+  

@@ -1,0 +1,286 @@
+.home-container {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.home-carousel {
+  position: relative;
+}
+.service-row h1{
+  padding-right: 350px;
+}
+.home-third{
+  background-color: #b3b7b3;
+  border-radius: 20px;
+}
+.carousel-slide {
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.specific_list{
+  background-color: #004d40;
+}
+
+#submit-button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.about-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-text h2, .about-text h1 {
+  margin: 10px 0;
+}
+
+.highlights ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.highlights li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.services-section {
+  background-color: #fff;
+  padding: 40px 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.brand_name {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.brand__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  gap: 20px;
+}
+
+.brand__list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand__list li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brand__list img {
+  max-width: 100%;
+  height: auto;
+}
+.brands {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand2 {
+  margin-bottom: 20px;
+}
+
+.brand2 h1 {
+  font-size: 2.5rem;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.brand2 h2 {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+.brand2 p {
+  font-size: 1.2rem;
+  color: #004d40;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-second{
+  border-radius: 10px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  background-color: #f0f0f0; /* Adjust as needed */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column {
+  flex: 1;
+ 
+}
+
+.column img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  
+}
+
+.column h2, .column h1 {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.column h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.column h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.column p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .column img {
+    margin-bottom: 20px;
+  }
+}
+
+
+.home-first {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -100px;
+}
+
+.body-div {
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-groupp {
+  margin-bottom: 10px;
+  padding-top: 100px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.text-overlay {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.text-overlay h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.text-overlay p {
+  font-size: 1.2em;
+}
+
+.charge {
+  font-weight: bold;
+}

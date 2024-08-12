@@ -1,0 +1,152 @@
+.contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px;
+  margin-bottom: -130px;
+  background-image: url("../Assets//serviceprovider.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+h2 {
+  color: #ffffff;
+}
+
+.contain {
+  min-height: 700px; /* Adjust as needed */
+}
+
+/* Styling for the How it Works container */
+.how-it-works-container {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(41, 39, 61, 0.179);
+  border-radius: 20px;
+  margin: 100px 200px;
+  margin-right: 500px;
+  transition: transform 0.3s ease;
+  
+}
+
+.how-it-works-container:hover {
+  transform: scale(1.02);
+}
+
+.how-it-works-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.step:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+.step img {
+  width: 40px;
+  height: 40px;
+}
+
+.step.active {
+  background-color: #181a4f61;
+  color: white;
+}
+
+.step span {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+/* Styling for the form container */
+.form-container {
+  flex: 1;
+  max-width: 400px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  
+  margin-bottom: 150px;
+  margin-top: -90px;
+  background-color: #3f313a62;
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+.service-provider-form h2,
+.service-provider-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.service-provider-form h2 span,
+.service-provider-form h3 span {
+  color: #0d090b;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group .icon {
+  position: absolute;
+  left: 10px;
+  color: #080708;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1e9abc;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #21191e;
+  color: #c9bfbf;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #3f313a;
+  transform: translateY(-2px);
+}

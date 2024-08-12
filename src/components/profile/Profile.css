@@ -1,0 +1,108 @@
+.profile-container {
+  max-width: 500px; /* Set a max-width for the profile container */
+  margin: 20px auto; /* Center the profile container */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #f9f9f9; /* Light background color */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+  margin-bottom: 230px;
+  margin-top: 100px;
+}
+
+.profile-container:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.profile-container h2 {
+  text-align: center; /* Center align the heading */
+  color: #333; /* Dark text color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.profile-detail {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out label and value */
+  padding: 10px 0; /* Vertical padding */
+  border-bottom: 1px solid #ddd; /* Light bottom border for separation */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+.profile-detail:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.profile-detail strong {
+  color: #555; /* Medium gray color for labels */
+}
+
+.profile-detail span {
+  color: #333; /* Dark color for values */
+  font-weight: 500; /* Slightly bolder font for values */
+}
+
+/* Styling for form elements */
+input[type="text"],
+input[type="emails"],
+input[type="tel"] {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding for input */
+  margin-top: 5px; /* Space above the input */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Font size for inputs */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+/* Button styling */
+.edit-button {
+  margin-top: 20px; /* Space above the button */
+  padding: 10px 15px; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background change */
+}
+
+.edit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 15px; /* Adjust padding for smaller screens */
+    max-width: 90%; /* Make it full width on small devices */
+  }
+
+  .profile-detail {
+    flex-direction: column; /* Stack label and value on small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .profile-detail span {
+    margin-top: 5px; /* Add space between label and value */
+  }
+}
+.cancel-button {
+    margin-left: 10px;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f; /* Darker red */
+}
