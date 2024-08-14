@@ -1,6 +1,6 @@
 import React from 'react';
 import '../contact/Contact.css';
-import contactImage from '../images/bg2.jpg'; // Update the path as per your project structure
+import contactImage from '../images/bg2.jpg'; 
 
 const ContactPage = () => {
   return (
@@ -11,7 +11,7 @@ const ContactPage = () => {
       </div>
       <header className="contact-header">
         <img src={contactImage} alt="Contact Us" className="contact-image" />
-        <div className="contact-info">
+        <div className="contact-infos">
           <h1>Have any Queries</h1><br/>
           <p>Your opinion matters!! Tell us what you think.</p><br/>
           <p>
@@ -50,5 +50,4 @@ const ContactPage = () => {
     </div>
   );
 };
-
 export default ContactPage;

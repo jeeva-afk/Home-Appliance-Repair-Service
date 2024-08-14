@@ -4,7 +4,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import '../home/Home.css';
 import { Link } from 'react-router-dom';
-
+import react1 from '../images/react 1.jpg'
+import react2 from '../images/react2.jpg'
+import react3 from '../images/react3.jpg'
 
 
 const Home = () => {
@@ -16,7 +18,7 @@ const Home = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 2000,
         pauseOnHover:false,
     };
 
@@ -28,7 +30,7 @@ const Home = () => {
                 <div className="body-div">
                     <img
                         className="banner-img"
-                        src="https://media.istockphoto.com/id/1130957259/photo/composition-with-tools-and-industrial-material-with-industrial-ship-background.jpg?s=612x612&w=0&k=20&c=XDZNptsfq3TASTKWGsmnDajREC820JuDQf9IyRanCsg="
+                        src={react1}
                         alt="Home Service Banner"
                     />
                     <div className="overlay">
@@ -45,7 +47,7 @@ const Home = () => {
                 <div className="body-div">
                 <img
                         className="banner-img"
-                        src="https://media.istockphoto.com/id/894471508/photo/electrician-working-in-a-residential-electrical-system.jpg?s=612x612&w=0&k=20&c=0AaXIkN3-bNXjvUOMGZP7EMxWRNAXdi09baAv-urStY="
+                        src={react2}
                         alt="Home Service Banner"
                     />
                     <div className="overlay">
@@ -63,7 +65,7 @@ const Home = () => {
                 <div className="body-div">
                 <img
                         className="banner-img"
-                        src="https://media.istockphoto.com/id/1205228815/photo/male-plumber-working-to-fix-leaking-sink-in-home-bathroom.jpg?s=612x612&w=0&k=20&c=VIX39T8xM5qNUTM6qqy8SDsGMs7OaaZotFNv3dCn2CU="
+                        src={react3}
                         alt="Home Service Banner"
                     />
                     <div className="overlay">

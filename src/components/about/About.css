@@ -149,7 +149,7 @@ button:hover {
 
 /* Service section */
 .service-container {
-    background-image: url('https://apelectricinc.com/wp-content/uploads/2019/02/AP-ELECTRIC-TITLE-IMAGE.jpg');
+    background-image: url('../images/about.jpg');
     background-size: cover;
     background-attachment: fixed;
     padding: 80px 50px;

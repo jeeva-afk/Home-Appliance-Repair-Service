@@ -29,16 +29,13 @@ const Login = () => {
         errors.email = 'Please enter a valid email';
       }
     }
-
     if (!formData.password.trim()) {
       formIsValid = false;
       errors.password = 'Password is required';
     }
-
     setFormErrors(errors);
     return formIsValid;
   };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -46,7 +43,6 @@ const Login = () => {
       [name]: value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormErrors({});
@@ -63,8 +59,8 @@ const Login = () => {
             email: '',
             password: '',
           });
-          login(formData.email); // Call the login function with the user's email
-          navigate('/'); // Redirect to home or another page after successful login
+          login(formData.email); 
+          navigate('/'); 
         }
       } catch (error) {
         console.error('Login failed:', error.response?.data || error.message);
@@ -72,7 +68,6 @@ const Login = () => {
       }
     }
   };
-
   return (
     <div className="login-back">
       <div className="container">
@@ -125,5 +120,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;

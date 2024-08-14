@@ -1,7 +1,6 @@
 // src/context/AuthContext.js
 import React, { createContext, useState } from 'react';
 
-// Create an AuthContext
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -10,12 +9,12 @@ export const AuthProvider = ({ children }) => {
 
     const login = (user) => {
         setLoggedIn(true);
-        setUsername(user); // Set the username when logging in
+        setUsername(user);
     };
 
     const logout = () => {
         setLoggedIn(false);
-        setUsername(''); // Clear the username on logout
+        setUsername(''); 
     };
 
     return (

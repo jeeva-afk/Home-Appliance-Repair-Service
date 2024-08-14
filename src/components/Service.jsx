@@ -2,6 +2,7 @@ import React from 'react';
 import '../Assets/Service.css';
 import { useState } from 'react';
 import { color } from 'framer-motion';
+import services from './images/services.jpg'
 const offerings = [
   {
     image: 'https://cdn.porch.com/bootstrap/0web/done/859-appliance-installation-small.jpg',
@@ -75,7 +76,7 @@ const Service = () => {
         <div className="body-div">
           <img 
             className="hotel" 
-            src="https://apelectricinc.com/wp-content/uploads/2019/02/AP-ELECTRIC-TITLE-IMAGE.jpg"
+            src={services}
             alt="Home Service Banner" 
           />
           <div className="transparent-layers"></div>  

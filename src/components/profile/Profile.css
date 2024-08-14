@@ -43,9 +43,9 @@
 }
 
 /* Styling for form elements */
-input[type="text"],
+input[type="texts"],
 input[type="emails"],
-input[type="tel"] {
+input[type="tels"] {
   width: calc(100% - 20px); /* Full width minus padding */
   padding: 10px; /* Padding for input */
   margin-top: 5px; /* Space above the input */
@@ -60,6 +60,16 @@ input[type="tel"]:focus {
   border-color: #007bff; /* Change border color on focus */
   outline: none; /* Remove outline */
 }
+/* In Profile.css */
+input[type="passwords"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
 
 /* Button styling */
 .edit-button {

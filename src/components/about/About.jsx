@@ -1,13 +1,13 @@
 import React from 'react';
 import '../about/About.css';
-import about from '../images/about.jpg'
+import about1 from '../images/about1.jpg'
 
 const About = () => {
     return (
         <div className="body-container">
             <div className="home-first">
                 <div className="body-div">
-                    <img className="hotel" src="https://media.istockphoto.com/id/1354891373/photo/a-male-electrician-works-in-a-switchboard-with-an-electrical-connecting-cable.jpg?s=612x612&w=0&k=20&c=Kf3dKdLua7qjo_ekhqGOKeL-f9rxxjNsvAkNgKZJ6BI=" alt="Home Service Banner" />
+                    <img className="hotel" src={about1} alt="Home Service Banner" />
                     <div className="transparent-layer"></div>
                     <div className="text-overlay">
                         <h1><b>Why our Service is a good option to choose?</b></h1>

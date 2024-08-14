@@ -4,8 +4,8 @@ import '../blog/Blog.css';
 
 const Blog = () => {
   return (
-    <div className="blog">
-      <h1 className="blog-header">Blog</h1>
+    <div className='b'>    <div className="blog">
+      <h1 className="blog-header">Blogs</h1>
       <div className="image-grid">
         {blogPosts.map((post, index) => (
           <div className="image-container" key={index}>
@@ -17,6 +17,7 @@ const Blog = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

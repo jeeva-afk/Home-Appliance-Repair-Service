@@ -28,9 +28,7 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage(''); // Reset error message
-
-    // Validation
+    setErrorMessage(''); 
     if (
       formData.name.trim() === '' ||
       formData.email.trim() === '' ||
@@ -46,7 +44,6 @@ const Signup = () => {
       setErrorMessage('Passwords do not match.');
       return;
     }
-
     try {
       const response = await axios.post('http://localhost:8080/api/add', {
         name: formData.name,
@@ -54,10 +51,8 @@ const Signup = () => {
         password: formData.password,
         mobile: formData.mobile,
       });
-
       console.log('User created:', response.data);
       alert("Regisered Successful");
-      
       setFormData({
         name: '',
         email: '',
@@ -71,7 +66,6 @@ const Signup = () => {
       setErrorMessage(error.response?.data?.message || 'Something went wrong, please try again.');
     }
   };
-
   return (
     <div className="signup-page-background">
       <div className="signup-container">
@@ -91,7 +85,6 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </div>
-
             <div className="input-field">
               <img src={email_icon} alt="email" height="30" width="30" />
               <input
@@ -102,7 +95,6 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </div>
-
             <div className="input-field">
               <img src={phone_icon} alt="phone" height="30" width="30" />
               <input
@@ -113,7 +105,6 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </div>
-
             <div className="input-field">
               <img src={password_icon} alt="password" height="30" width="30" />
               <input
@@ -124,7 +115,6 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </div>
-
             <div className="input-field">
               <img src={password_icon} alt="confirm password" height="30" width="30" />
               <input
@@ -140,8 +130,7 @@ const Signup = () => {
           <div className="signup-submit-container">
             <button type="submit" className="signup-submit-button">SignUp</button>
           </div>
-        </form>
-      
+        </form>  
         <p className="signup-already">
           Already have an account? <Link to="/login" className="signup-login">Login</Link>
         </p>

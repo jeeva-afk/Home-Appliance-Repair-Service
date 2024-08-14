@@ -7,13 +7,17 @@ const Profile = () => {
     const { username } = useContext(AuthContext);
     const [userDetails, setUserDetails] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
+    const [isPasswordEditing, setIsPasswordEditing] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         mobile: '',
+        password: '',
     });
 
     useEffect(() => {
+
+        console.log(username);
         const fetchUserDetails = async () => {
             try {
                 const response = await axios.get(`http://localhost:8080/api/user/email/${username}`);
@@ -22,6 +26,7 @@ const Profile = () => {
                     name: response.data.name,
                     email: response.data.email,
                     mobile: response.data.mobile,
+                    password: response.data.password, // Leave password empty initially
                 });
             } catch (error) {
                 console.error('Error fetching user details:', error);
@@ -45,6 +50,7 @@ const Profile = () => {
             const response = await axios.put(`http://localhost:8080/api/user/email/${username}`, formData);
             setUserDetails(response.data); // Update local state with the updated user details
             setIsEditing(false); // Exit edit mode
+            setIsPasswordEditing(false); // Exit password editing mode
         } catch (error) {
             console.error('Error updating user details:', error);
         }
@@ -55,8 +61,10 @@ const Profile = () => {
             name: userDetails.name,
             email: userDetails.email,
             mobile: userDetails.mobile,
+            password: '', // Reset password field
         });
         setIsEditing(false); // Exit edit mode
+        setIsPasswordEditing(false); // Exit password editing mode
     };
 
     if (!userDetails) {
@@ -66,13 +74,13 @@ const Profile = () => {
     return (
         <div className="profile-container">
             <h2>User Profile</h2>
-            {isEditing ? (
+            {isEditing || isPasswordEditing ? (
                 <form onSubmit={handleSubmit}>
                     <div className="profile-detail">
                         <label>
                             <strong>Name:</strong>
                             <input
-                                type="text"
+                                type="texts"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
@@ -84,7 +92,7 @@ const Profile = () => {
                         <label>
                             <strong>Email:</strong>
                             <input
-                                type="emails" // Fixed the type from 'emails' to 'email'
+                                type="emails" 
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
@@ -96,7 +104,7 @@ const Profile = () => {
                         <label>
                             <strong>Mobile:</strong>
                             <input
-                                type="tel"
+                                type="tels"
                                 name="mobile"
                                 value={formData.mobile}
                                 onChange={handleChange}
@@ -104,6 +112,20 @@ const Profile = () => {
                             />
                         </label>
                     </div>
+                    {isPasswordEditing && (
+                        <div className="profile-detail">
+                            <label>
+                                <strong>Password:</strong>
+                                <input
+                                    type="passwords"
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </label>
+                        </div>
+                    )}
                     <button type="submit" className="edit-button">Save Changes</button>
                     <button type="button" className="cancel-button" onClick={handleCancel}>Cancel</button>
                 </form>
@@ -119,6 +141,7 @@ const Profile = () => {
                         <strong>Mobile:</strong> <span>{userDetails.mobile}</span>
                     </div>
                     <button className="edit-button" onClick={() => setIsEditing(true)}>Edit Profile</button>
+                    <button className="edit-button" onClick={() => setIsPasswordEditing(true)}>Change Password</button>
                 </>
             )}
         </div>

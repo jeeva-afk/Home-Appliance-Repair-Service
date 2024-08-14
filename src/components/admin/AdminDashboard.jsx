@@ -19,13 +19,13 @@ const AdminDashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                console.log('Fetching data...'); // Debugging log
+                console.log('Fetching data...'); 
                 const usersResponse = await axios.get('http://localhost:8080/api/all');
                 setUsers(usersResponse.data);
-                console.log('Users response:', usersResponse.data); // Debugging log
+                console.log('Users response:', usersResponse.data); 
                 const servicemenResponse = await axios.get('http://localhost:8080/api/technicians/all');
                 setServicemen(servicemenResponse.data);
-                console.log('Servicemen response:', servicemenResponse.data); // Debugging log
+                console.log('Servicemen response:', servicemenResponse.data); 
                 const bookingsResponse = await axios.get('http://localhost:8080/api/service-requests/get');
                 setBookings(bookingsResponse.data);
                 console.log('Bookings:', bookingsResponse.data);
@@ -54,8 +54,6 @@ const AdminDashboard = () => {
         }
     };
     
-
-
     const handleDeleteServiceman = async (id) => {
         try {
             await axios.delete(`http://localhost:8080/api/technicians/${id}`);
@@ -65,15 +63,11 @@ const AdminDashboard = () => {
         }
     };
 
-   
-
     const handleEditServiceman = (id) => {
         const servicemanToEdit = servicemen.find(serviceman => serviceman.id === id);
         setEditingServicemanId(id);
         setEditingServicemanData({ ...servicemanToEdit });
     };
-    
-
     const handleSaveServiceman = async () => {
         try {
             const response = await axios.put(`http://localhost:8080/api/technicians/ser/${editingServicemanId}`, editingServicemanData);
@@ -94,10 +88,6 @@ const AdminDashboard = () => {
         }
     };
     
-
-
-    
-
     const handleSaveBooking = async () => {
         try {
             await axios.put(`/api/bookings/${editingBookingId}`, editingBookingData);
@@ -115,9 +105,8 @@ const AdminDashboard = () => {
     const filteredUsers = users.filter(user => user.name.toLowerCase().includes(userSearchTerm.toLowerCase()));
     const filteredServicemen = servicemen.filter(serviceman => serviceman.name.toLowerCase().includes(servicemanSearchTerm.toLowerCase()));
     const filteredBookings = bookings.filter(booking =>
-        booking.user && booking.user.name.toLowerCase().includes(bookingSearchTerm.toLowerCase())
+        booking.name && booking.name.toLowerCase().includes(bookingSearchTerm.toLowerCase())
     );
-
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -251,43 +240,43 @@ const AdminDashboard = () => {
                     </div>
                 )}
                 {activeSection === 'bookings' && (
-    <div>
-        <h2 className='h2'>Booking Requests</h2>
-        <input
-            type="text"
-            placeholder="Search Bookings..."
-            value={bookingSearchTerm}
-            onChange={(e) => setBookingSearchTerm(e.target.value)}
-            className="search-input"
-        />
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Technician Name</th>
-                    <th>Service</th>
-                    <th>Technician ID</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {filteredBookings.map(booking => (
-                    <tr key={booking.id}>
-                        <td>{booking.id}</td>
-                        <td>{booking.user ? booking.user.name : 'N/A'}</td>
-                        <td>{booking.address}</td>
-                        <td>{booking.description}</td>
-                        <td>{booking.serviceType}</td>
-                        <td>{booking.technicianId}</td>
-                        
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-    </div>
-)}
+                    <div>
+                        <h2 className='h2'>Booking Requests</h2>
+                        <input
+                            type="text"
+                            placeholder="Search Bookings..."
+                            value={bookingSearchTerm}
+                            onChange={(e) => setBookingSearchTerm(e.target.value)}
+                            className="search-input"
+                        />
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Service Type</th>
+                                    <th>Preferred Date</th>
+                                    <th>City</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {filteredBookings.map(booking => (
+                                    <tr key={booking.id}>
+                                        <td>{booking.id}</td>
+                                        <td>{booking.name}</td>
+                                        <td>{booking.email}</td>
+                                        <td>{booking.serviceType}</td>
+                                        <td>{booking.preferredDateTime}</td>
+                                        <td>{booking.city}</td>
+                                        <td>{booking.description}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                )}
 
             </div>
         </div>

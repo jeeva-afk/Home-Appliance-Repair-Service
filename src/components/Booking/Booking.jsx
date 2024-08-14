@@ -51,7 +51,7 @@ const Booking = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data: ', formData); // Log form data to debug
+    console.log('Form Data: ', formData); 
   
     try {
       const response = await axios.post('http://localhost:8080/api/service-requests/book', formData, {
@@ -60,7 +60,7 @@ const Booking = () => {
         },
       });
   
-      console.log('Response: ', response); // Log the response to debug
+      console.log('Response: ', response); 
   
       if (response.status === 200) {
         alert('Service booked successfully!');
@@ -69,15 +69,12 @@ const Booking = () => {
       }
     } catch (error) {
       if (error.response) {
-        // Server responded with a status other than 200 range
         console.error('Error response:', error.response.data);
         alert('Failed to book service: ' + (error.response.data.message || error.response.statusText));
       } else if (error.request) {
-        // Request was made but no response received
         console.error('Error request:', error.request);
         alert('Failed to book service: No response from server.');
       } else {
-        // Something else happened while setting up the request
         console.error('Error message:', error.message);
         alert('Failed to book service: ' + error.message);
       }

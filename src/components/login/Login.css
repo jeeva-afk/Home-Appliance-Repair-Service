@@ -22,15 +22,15 @@
   justify-content: center;
   align-items: center;
   width: 80%; /* Reduced width */
-  max-width: 380px; /* Reduced max-width */
-  height: 500px; /* Allow height to adjust based on content */
-  max-height: 100vh; /* Limit height */
-  box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.5); /* Slightly softer shadow */
-  background-color: #00000090; /* Lighter background color */
-  backdrop-filter: blur(10px); /* Reduced blur */
+  max-width: 380px;
+  height: 500px; 
+  max-height: 100vh; 
+  box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.5); 
+  background-color: #00000090; 
+  backdrop-filter: blur(10px); 
   padding: 20px;
   margin-left: 750px;
-  border-radius: 18px; /* Slightly reduced border-radius */
+  border-radius: 18px; 
   box-sizing: border-box;
   overflow: hidden;
   margin-top: 40px;
@@ -85,23 +85,23 @@
   width: 100%;
   border: none;
   outline: none;
-  color: #666; /* Softer text color */
-  font-size: 0.875rem; /* Reduced font size */
-  padding: 8px; /* Reduced padding */
-  border-radius: 4px; /* Reduced border-radius */
+  color: #666; 
+  font-size: 0.875rem; 
+  padding: 8px; 
+  border-radius: 4px; 
 }
 
 .forgot-password {
   width: 100%;
   text-align: center;
-  color: white; /* Changed to a more professional blue */
-  font-size: 0.875rem; /* Reduced font size */
+  color: white; 
+  font-size: 0.875rem;
   font-weight: 500;
   margin: 15px 0;
 }
 
 .forgot-password span {
-  color: white; /* Softer black */
+  color: white; 
   text-decoration: none;
 }
 
